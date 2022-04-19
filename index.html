@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reg form-2022</title>
+    <script>
+        function submitHandler() {
+
+            let user = document.getElementById("user").value;
+            let email = document.getElementById("email").value;
+            let mobile = document.getElementById("mobile").value;
+            //    let revUser=  user.split("").reverse().join("");
+                 let rev= "";
+                for (let i = user.length - 1; i >= 0; i--) {
+                    rev += user[i];
+                }
+                
+                document.write("Your name :", rev)
+            
+            document.write("Your email :", email)
+            document.write("Your contact no:", mobile)
+
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <form onsubmit="submitHandler()" class="reg-form">
+            <input type="text" id="user" name="usename" placeholder="usename"><br><br>
+            <input type="text" id="email" name="email" placeholder="email"><br><br>
+            <input type="text" id="mobile" name="mobile" placeholder="mobile"><br><br>
+            <input type="submit" name="Submit">
+
+        </form>
+    </div>
+
+</body>
+
+</html>
